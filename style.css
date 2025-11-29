@@ -1,36 +1,84 @@
-/* Dark modern portfolio CSS */
+/* Dark modern portfolio with glow accents and animations */
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0d0d0d;
+  font-family: 'Inter', sans-serif;
+  background-color: #0b0b0b;
   color: #f0f0f0;
+  scroll-behavior: smooth;
 }
 
-header {
-  padding: 40px;
+/* HERO SECTION */
+.hero {
   text-align: center;
+  padding: 100px 20px 60px;
 }
 
-nav {
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #cfcfff;
+  margin-top: 10px;
+}
+
+.hero-buttons {
+  margin-top: 25px;
   display: flex;
   justify-content: center;
-  gap: 25px;
-  margin-top: 20px;
+  gap: 15px;
 }
 
-nav a {
+.btn {
+  padding: 12px 25px;
+  background: #4d4dff;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  background: #6666ff;
+}
+
+.btn.secondary {
+  background: transparent;
+  border: 2px solid #4d4dff;
+}
+
+.btn.secondary:hover {
+  background: #4d4dff;
+  color: white;
+}
+
+/* NAVIGATION */
+.navbar {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.navbar a {
   color: #b3b3ff;
   text-decoration: none;
   font-size: 18px;
   transition: 0.3s;
 }
 
-nav a:hover {
+.navbar a:hover {
   color: #ffffff;
   transform: scale(1.1);
 }
 
+/* SECTION STYLING */
 .section {
   padding: 60px 20px;
   max-width: 900px;
@@ -39,29 +87,83 @@ nav a:hover {
 
 h2 {
   color: #cfcfff;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  margin-bottom: 15px;
 }
 
+/* SCROLL FADE ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 0.9s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PROJECT CARDS */
 .project-card {
   background-color: #1a1a1a;
-  padding: 20px;
+  padding: 25px;
   margin: 20px 0;
-  border-radius: 10px;
-  transition: 0.3s ease;
+  border-radius: 12px;
+  transition: 0.3s;
+  border: 1px solid #2e2e2e;
 }
 
 .project-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
   background-color: #262626;
+  border-color: #4d4dff;
 }
 
 .project-card a {
   color: #b3b3ff;
+  font-weight: 600;
+  text-decoration: none;
 }
 
+/* SKILLS GRID */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.skill {
+  background: #1a1a1a;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #333;
+  transition: 0.3s;
+}
+
+.skill:hover {
+  background: #262626;
+  border-color: #4d4dff;
+}
+
+/* CONTACT LINKS */
+.contact-link {
+  color: #b3b3ff;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: white;
+}
+
+/* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 40px;
   margin-top: 40px;
-  color: #888;
+  color: #777;
+  font-size: 0.9rem;
 }
