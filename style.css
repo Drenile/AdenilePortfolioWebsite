@@ -42,6 +42,7 @@ body {
   box-shadow: 0 0 15px #4d4dff, 0 0 25px #4d4dff50;
   transform: scale(1.05);
 }
+
 .hero-buttons {
   margin-top: 25px;
   display: flex;
