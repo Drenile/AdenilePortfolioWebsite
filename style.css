@@ -178,15 +178,6 @@ h2 {
   color: white;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 40px;
-  margin-top: 40px;
-  color: #777;
-  font-size: 0.9rem;
-}
-
 /* === Animated Video Background === */
 #bg-video {
   position: fixed;
@@ -208,3 +199,14 @@ footer {
   background: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 40px;
+  margin-top: 40px;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+
