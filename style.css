@@ -125,25 +125,52 @@ h2 {
 }
 
 /* PROJECT CARDS */
+/* PROJECT CARDS */
 .project-card {
-  background-color: #1a1a1a;
+  background: linear-gradient(
+    135deg,
+    rgba(40, 40, 60, 0.85),
+    rgba(20, 20, 30, 0.85)
+  );
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
   padding: 25px;
-  margin: 20px 0;
-  border-radius: 12px;
-  transition: 0.3s;
-  border: 1px solid #2e2e2e;
+  margin: 24px 0;
+  border-radius: 14px;
+
+  border: 1px solid rgba(77, 77, 255, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease,
+              border-color 0.3s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  background-color: #262626;
+  transform: translateY(-8px);
   border-color: #4d4dff;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.6),
+    0 0 18px rgba(77, 77, 255, 0.35);
 }
 
+/* Project title */
+.project-card h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+/* Project links */
 .project-card a {
   color: #b3b3ff;
   font-weight: 600;
   text-decoration: none;
+}
+
+.project-card a:hover {
+  color: #ffffff;
 }
 
 /* SKILLS GRID */
